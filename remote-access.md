@@ -10,7 +10,7 @@ msfvenom -h
 ```
 A proper malware has 4 parts; Payload , Platform, Encoder & File format.
 
-To list out multiple payloads, platforms, encoders on the MSFvenom page, we use the command; 
+To list out multiple payloads, platforms, encoders on the MSFvenom page, We use the command; 
 ```
 msfvenom -l payloads
 ```
